@@ -24,12 +24,6 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.new(attributes)
   movie.save
   movie
-  # movie = Movie.create
-  # movie.title = attributes[:title]
-  # movie.release_date = attributes[:release_date]
-  # movie.director = attributes[:director]
-  # movie.lead = attributes[:lead]
-  # movie.in_theaters = attributes[:in_theaters]
 end
 
 def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
@@ -38,7 +32,6 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
     m.release_date = [:release_date]
     m.save
   end
-
 end
 
 def can_get_the_first_item_in_the_database
