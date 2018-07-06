@@ -31,13 +31,13 @@ def can_be_created_with_a_hash_of_attributes
   # movie.lead = attributes[:lead]
   # movie.in_theaters = attributes[:in_theaters]
 end
-#
-# def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
-#   binding.pry
-#   Movie.create do |m|
-#     binding.pry
-#   end
-# end
+
+def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
+  Movie.create do |m|
+    m.title = args[:title]
+    m.release_date = [:release_date]
+  end
+end
 
 def can_get_the_first_item_in_the_database
   __
