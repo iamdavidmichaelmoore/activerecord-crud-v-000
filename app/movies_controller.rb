@@ -23,6 +23,7 @@ def can_be_created_with_a_hash_of_attributes
   }
   movie = Movie.new(attributes)
   movie.save
+  movie
   # movie = Movie.create
   # movie.title = attributes[:title]
   # movie.release_date = attributes[:release_date]
