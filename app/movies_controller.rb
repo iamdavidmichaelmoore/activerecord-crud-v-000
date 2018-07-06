@@ -21,19 +21,21 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.new
-  movie.title = attributes[:title]
-  movie.release_date = attributes[:release_date]
-  movie.director = attributes[:director]
-  movie.lead = attributes[:lead]
-  movie.in_theaters = attributes[:in_theaters]
+  Movie.new(attributes)
+  # movie = Movie.create
+  # movie.title = attributes[:title]
+  # movie.release_date = attributes[:release_date]
+  # movie.director = attributes[:director]
+  # movie.lead = attributes[:lead]
+  # movie.in_theaters = attributes[:in_theaters]
 end
-
-def can_be_created_in_a_block(args = __)
-  Movie.create do |m|
-    __
-  end
-end
+#
+# def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
+#   binding.pry
+#   Movie.create do |m|
+#     binding.pry
+#   end
+# end
 
 def can_get_the_first_item_in_the_database
   __
