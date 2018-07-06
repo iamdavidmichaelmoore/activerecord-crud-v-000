@@ -83,7 +83,6 @@ def can_update_multiple_items_at_once
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
   Movie.update_all(title: "A Movie")
-  __
 end
 
 def can_destroy_a_single_item
